@@ -14,20 +14,24 @@ const perguntas = ["Pergunta 1", "Pergunta 2"];
 const perguntas = [
   {
     enunciado:
+<<<<<<< HEAD
+      "Ana está explorando a floresta quando encontra uma pequena porta em uma árvore. Ao lado dela, existem duas chaves: uma dourada e uma prateada.",
+=======
       "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
 <<<<<<< HEAD
     alternativas: ["Isso é assustador!", "Isso é maravilhoso!"],
   texto:
 }
 =======
+>>>>>>> f4cc415b2a1e3ad2cb3b2a9e100c8bdc124c7b34
     alternativas: [
         {
-          texto:"Isso é assustador!"
+          texto:"Chave dourada: Ana pega a chave e percebe que ela possui um símbolo de sol. Ela demonstra coragem."
           afirmacao: "afirmacao"
         }
         
         {
-          texto: "Isso é maravilhoso!"
+          texto: "Chave prateada: Ana escolhe a chave com símbolo de lua. Ela demonstra cautela."
           afirmacao:"afirmacao"
         }, 
     ],
@@ -35,10 +39,17 @@ const perguntas = [
   ,
   {
     enunciado:
-      "Com a descoberta desta tecnologia, chamada Inteligência Artificial (IA), uma professora de tecnologia da escola decidiu fazer uma sequência de aulas sobre esta tecnologia. No fim de uma aula ela pede que você escreva um trabalho sobre o uso de IA em sala de aula. Qual atitude você toma?",
+      "Mais adiante, Ana encontra um viajante perdido. Ele pede ajuda para encontrar o caminho de volta.",
     alternativas: [
-      "Utiliza uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento.",
-      "Escreve o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
+      {
+        texto: "Utiliza uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento.",
+        afirmacao: "afirmacao"
+      }
+
+      {
+        texto: "Escreve o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
+        afirmacao: "afirmacao"
+      }
     ],
      alternativas: ["Isso é assustador!", "Isso é maravilhoso!"],
   texto:
@@ -129,45 +140,18 @@ const perguntas = [
 
 let atual = 0;
 let perguntaAtual;
-let historiaFinal = "";
 
-function respostaSelecionada(opcaoSelecionada) {
-  const afirmacoes = opcaoSelecionada.afirmacoes;
-  historiaFinal += afirmacoes + " ";
-  atual++;
-  mostraPergunta();
-}
-(const alternativa of perguntaAtual.alternativas)
-
-function mostraAlternativas() {
-  for (const alternativa of perguntaAtual.alternativas) {
-    const botaoAlternativas = document.createElement("button");
-    botaoAlternativas.textContent = alternativa;
-    caixaAlternativas.appendChild(botaoAlternativas);
-  }
-}
 function mostraPergunta() {
-  if (atual >= perguntas.length) {
+    if (atual >= perguntas.length) {
     mostraResultado();
     return;
   }
   perguntaAtual = perguntas[atual];
   caixaPerguntas.textContent = perguntaAtual.enunciado;
-  caixaAlternativas.textContent = "";
-  mostraAlternativas();
 }
-function mostraResultado() {
-  caixaPerguntas.textContent = "Em 2049...";
-  textoResultado.textContent = historiaFinal;
-  caixaAlternativas.textContent = "";
-}
-let historiaFinal = "";
-function respostaSelecionada(opcaoSelecionada) {
-  const afirmacao = opcaoSelecionada.afirmacao;
-  historiaFinal += afirmacao + " ";
-  atual++;
-  mostraPergunta();
-}
+
+mostraPergunta();
+
 
 
 
