@@ -14,16 +14,14 @@ const perguntas = ["Pergunta 1", "Pergunta 2"];
 const perguntas = [
   {
     enunciado:
-<<<<<<< HEAD
+ HEAD
       "Ana está explorando a floresta quando encontra uma pequena porta em uma árvore. Ao lado dela, existem duas chaves: uma dourada e uma prateada.",
-=======
       "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
-<<<<<<< HEAD
+HEAD
     alternativas: ["Isso é assustador!", "Isso é maravilhoso!"],
   texto:
 }
-=======
->>>>>>> f4cc415b2a1e3ad2cb3b2a9e100c8bdc124c7b34
+
     alternativas: [
         {
           texto:"Chave dourada: Ana pega a chave e percebe que ela possui um símbolo de sol. Ela demonstra coragem."
@@ -35,26 +33,24 @@ const perguntas = [
           afirmacao:"afirmacao"
         }, 
     ],
->>>>>>> bac449d5a76402af597658b17f0c853babbc2b8b
   ,
   {
     enunciado:
       "Mais adiante, Ana encontra um viajante perdido. Ele pede ajuda para encontrar o caminho de volta.",
     alternativas: [
       {
-        texto: "Utiliza uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento.",
+        texto: "Ajudá-lo: Ana decide ajudá-lo e os dois conseguem encontrar uma trilha segura. Ela demonstra bondade.",
         afirmacao: "afirmacao"
       }
 
       {
-        texto: "Escreve o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
+        texto: "Continuar sozinha: Ana agradece, mas prefere seguir seu próprio caminho. Ela demonstra independência.",
         afirmacao: "afirmacao"
       }
     ],
      alternativas: ["Isso é assustador!", "Isso é maravilhoso!"],
   texto:
 }
-=======
     alternativas: [
         {
           texto:"Isso é assustador!"
@@ -77,7 +73,6 @@ const perguntas = [
      alternativas: ["Isso é assustador!", "Isso é maravilhoso!"],
   texto:
 }
-=======
     alternativas: [
         {
           texto:"Isso é assustador!"
@@ -100,7 +95,6 @@ const perguntas = [
      alternativas: ["Isso é assustador!", "Isso é maravilhoso!"],
   texto:
 }
-=======
     alternativas: [
         {
           texto:"Isso é assustador!"
@@ -123,7 +117,6 @@ const perguntas = [
      alternativas: ["Isso é assustador!", "Isso é maravilhoso!"],
   texto:
 }
-=======
     alternativas: [
         {
           texto:"Isso é assustador!"
@@ -142,12 +135,21 @@ let atual = 0;
 let perguntaAtual;
 
 function mostraPergunta() {
-    if (atual >= perguntas.length) {
-    mostraResultado();
-    return;
+    perguntaAtual = perguntas[atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+    mostraAlternativa();
   }
-  perguntaAtual = perguntas[atual];
-  caixaPerguntas.textContent = perguntaAtual.enunciado;
+  
+function mostraAlternativas() {
+  for (const alternativa of perguntaAtual.alternativas) {
+    const botaoAlternativas = document.createElement("button");
+    botaoAlternativas.textContent = alternativa.texto;
+    botaoAlternativas.addEventListener("click", function(){
+    atual++;
+    mostraPergunta();
+  })
+    caixaAlternativas.appendChild(botaoAlternativas);
+  }
 }
 
 mostraPergunta();
