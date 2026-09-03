@@ -49,8 +49,6 @@ cconst perguntas = [
         ]
     },
     
-     
-        ],
     {
         enunciado: "Já perto do fim da floresta, Ana encontra uma pedra brilhante com uma mensagem: 'Somente quem fez as escolhas certas encontrará o caminho de volta'.Ela precisa decidir o que fazer com a pedra.",
         alternativas: [
@@ -64,7 +62,8 @@ cconst perguntas = [
            }
             
         ]
-    }
+    },
+  ];
 
 let atual = 0;
 let perguntaAtual;
