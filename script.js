@@ -15,7 +15,7 @@ const perguntas = [
           {
             texto: "Chave prateada: Ana escolhe a chave com símbolo de lua. Ela demonstra cautela.",
             afirmacao: "afirmacao"
-          }
+          },
         ]
     },
     {
@@ -28,7 +28,7 @@ const perguntas = [
           {
             texto: "Continuar sozinha: Ana agradece, mas prefere seguir seu próprio caminho. Ela demonstra independência.",
             afirmacao: "afirmacao"
-          }
+          },
         ]
     },
     {
@@ -41,7 +41,7 @@ const perguntas = [
           {
             texto: "Procurar outro caminho: Prefere caminhar pela margem até achar um lugar mais seguro.",
             afirmacao: "afirmacao"
-          }
+          },
         ]
     },
     {
@@ -54,7 +54,7 @@ const perguntas = [
           {
             texto: "Deixá-la para trás: Ana considera a mensagem estranha e decide continuar sem a pedra. Ela demonstra confiança.",
             afirmacao: "afirmacao"
-          }
+          },
         ]
     }
 ];
