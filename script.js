@@ -61,6 +61,7 @@ const perguntas = [
 
 let atual = 0;
 let perguntaAtual;
+let historiaFinal = "";
 
 function mostraPergunta() {
     // Verifica se ainda existem perguntas no array
@@ -79,18 +80,23 @@ function mostraAlternativas() {
     for (const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
         botaoAlternativas.textContent = alternativa.texto;
-        botaoAlternativas.addEventListener("click", function() {
-            atual++;
-            mostraPergunta();
-        });
-        caixaAlternativas.appendChild(botaoAlternativas);
+        botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa)) {
+            caixaAlternativas.appendChild(botaoAlternativas);
+        };
+        
     }
-}
+  }
+    function respostaSelecionada(opcaoSelecionada){
+      const afisrmacoes = opcaoSelecionada.afirmacao;
+      hitoriaFinal += afirmacoes + " ";
+      atual++;
+      mostraPergunta();
+    }
 
 function exibeResultadoFinal() {
     caixaPerguntas.textContent = "Fim da jornada!";
+    textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
-    textoResultado.textContent = "Ana completou a travessia da floresta com base nas suas decisões.";
 }
 
 mostraPergunta();
