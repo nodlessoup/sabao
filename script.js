@@ -10,11 +10,11 @@ const perguntas = [
         alternativas: [
           {
             texto: "Chave dourada: Ana pega a chave e percebe que ela possui um símbolo de sol. Ela demonstra coragem.",
-            afirmacao: "demonstrou coragem"
+            afirmacao: "afirmacao"
           }, // Vírgula adicionada
           {
             texto: "Chave prateada: Ana escolhe a chave com símbolo de lua. Ela demonstra cautela.",
-            afirmacao: "demonstrou cautela"
+            afirmacao: "afirmacao"
           }
         ]
     },
@@ -23,11 +23,11 @@ const perguntas = [
         alternativas: [
           {
             texto: "Ajudá-lo: Ana decide ajudá-lo e os dois conseguem encontrar uma trilha segura. Ela demonstra bondade.",
-            afirmacao: "demonstrou bondade"
+            afirmacao: "afirmacao"
           },
           {
             texto: "Continuar sozinha: Ana agradece, mas prefere seguir seu próprio caminho. Ela demonstra independência.",
-            afirmacao: "demonstrou independência"
+            afirmacao: "afirmacao"
           }
         ]
     },
@@ -36,11 +36,11 @@ const perguntas = [
         alternativas: [
           {
             texto: "Atravessar devagar: Testa cada tábua antes de pisar para garantir a travessia com segurança.",
-            afirmacao: "foi prudente"
+            afirmacao: "afirmacao"
           }, // Vírgula adicionada e texto ajustado ao tema
           {
             texto: "Procurar outro caminho: Prefere caminhar pela margem até achar um lugar mais seguro.",
-            afirmacao: "evitou riscos desnecessários"
+            afirmacao: "afirmacao"
           }
         ]
     },
@@ -49,11 +49,11 @@ const perguntas = [
         alternativas: [
           {
             texto: "Guardar a pedra: Ana acredita que ela poderá ser útil e a guarda consigo. Ela demonstra atenção.",
-            afirmacao: "demonstrou atenção"
+            afirmacao: "afirmacao"
           },
           {
             texto: "Deixá-la para trás: Ana considera a mensagem estranha e decide continuar sem a pedra. Ela demonstra confiança.",
-            afirmacao: "demonstrou confiança em si mesma"
+            afirmacao: "afirmacao"
           }
         ]
     }
