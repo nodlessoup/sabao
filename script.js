@@ -76,13 +76,24 @@ function mostraPergunta() {
 
 function mostraAlternativas() {
     for (const alternativa of perguntaAtual.alternativas) {
+        const botaoAlternativas = document.createElement("button");
+        botaoAlternativas.textContent = alternativa.texto;
+        botaoAlternativas.addEventListener("click",() => respostaSelecionada(alternativa) {
+           
+        });
+        caixaAlternativas.appendChild(botaoAlternativas);
         const botaoAlternativa = document.createElement("button");
         botaoAlternativa.textContent = alternativa.texto;
         botaoAlternativa.addEventListener("click", () => respostaSelecionada(alternativa)) {
             caixaAlternativas.appendChild(botaoAlternativas);
         };
-        
-    }
+}
+function respostaSelecionada(opcaoSelecionada){
+  const afirmacoes = opcaoselecionada.afirmacoes;
+  historiaFinal = afirmacoes;
+  atual++;
+  mostraPergunta();
+}
   }
     function respostaSelecionada(opcaoSelecionada){
       const afisrmacoes = opcaoSelecionada.afirmacao;
@@ -90,7 +101,6 @@ function mostraAlternativas() {
       atual++;
       mostraPergunta();
     }
-
 function exibeResultadoFinal() {
     caixaPerguntas.textContent = "Fim da jornada!";
     textoResultado.textContent = historiaFinal;
