@@ -15,7 +15,7 @@ const perguntas = [
           {
             texto: "Chave prateada: Ana escolhe a chave com símbolo de lua. Ela demonstra cautela.",
             afirmacao: "afirmacao"
-          },
+          }
         ]
     },
     {
@@ -28,7 +28,7 @@ const perguntas = [
           {
             texto: "Continuar sozinha: Ana agradece, mas prefere seguir seu próprio caminho. Ela demonstra independência.",
             afirmacao: "afirmacao"
-          },
+          }
         ]
     },
     {
@@ -41,7 +41,7 @@ const perguntas = [
           {
             texto: "Procurar outro caminho: Prefere caminhar pela margem até achar um lugar mais seguro.",
             afirmacao: "afirmacao"
-          },
+          }
         ]
     },
     {
@@ -54,9 +54,9 @@ const perguntas = [
           {
             texto: "Deixá-la para trás: Ana considera a mensagem estranha e decide continuar sem a pedra. Ela demonstra confiança.",
             afirmacao: "afirmacao"
-          },
+          }
         ]
-    }
+    },
 ];
 
 let atual = 0;
@@ -67,7 +67,8 @@ function mostraPergunta() {
     // Verifica se ainda existem perguntas no array
     if (atual >= perguntas.length) {
         exibeResultadoFinal();
-        return;}
+        return;
+      }
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
     caixaAlternativas.textContent = ""; // Limpa os botões da pergunta anterior
@@ -78,15 +79,9 @@ function mostraAlternativas() {
     for (const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
         botaoAlternativas.textContent = alternativa.texto;
-        botaoAlternativas.addEventListener("click",() => respostaSelecionada(alternativa) {
-           
-        });
+        botaoAlternativas.addEventListener("click",() => respostaSelecionada(alternativa));
         caixaAlternativas.appendChild(botaoAlternativas);
-        const botaoAlternativa = document.createElement("button");
-        botaoAlternativa.textContent = alternativa.texto;
-        botaoAlternativa.addEventListener("click", () => respostaSelecionada(alternativa)) {
-            caixaAlternativas.appendChild(botaoAlternativas);
-        };
+        }
 }
 function respostaSelecionada(opcaoSelecionada){
   const afirmacoes = opcaoselecionada.afirmacoes;
@@ -94,13 +89,6 @@ function respostaSelecionada(opcaoSelecionada){
   atual++;
   mostraPergunta();
 }
-  }
-    function respostaSelecionada(opcaoSelecionada){
-      const afisrmacoes = opcaoSelecionada.afirmacao;
-      hitoriaFinal += afirmacoes + " ";
-      atual++;
-      mostraPergunta();
-    }
 function exibeResultadoFinal() {
     caixaPerguntas.textContent = "Fim da jornada!";
     textoResultado.textContent = historiaFinal;
