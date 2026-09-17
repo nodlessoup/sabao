@@ -67,9 +67,7 @@ function mostraPergunta() {
     // Verifica se ainda existem perguntas no array
     if (atual >= perguntas.length) {
         exibeResultadoFinal();
-        return;
-    }
-    
+        return;}
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
     caixaAlternativas.textContent = ""; // Limpa os botões da pergunta anterior
@@ -78,9 +76,9 @@ function mostraPergunta() {
 
 function mostraAlternativas() {
     for (const alternativa of perguntaAtual.alternativas) {
-        const botaoAlternativas = document.createElement("button");
-        botaoAlternativas.textContent = alternativa.texto;
-        botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa)) {
+        const botaoAlternativa = document.createElement("button");
+        botaoAlternativa.textContent = alternativa.texto;
+        botaoAlternativa.addEventListener("click", () => respostaSelecionada(alternativa)) {
             caixaAlternativas.appendChild(botaoAlternativas);
         };
         
