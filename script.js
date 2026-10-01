@@ -6,7 +6,6 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
 {
-{
     enunciado: "Ana está explorando a floresta quando encontra uma pequena porta em uma árvore. Ao lado dela, existem duas chaves: uma dourada e uma prateada.",
     alternativas: [
         {
