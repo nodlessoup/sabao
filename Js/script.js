@@ -1,10 +1,11 @@
+import {aleatorio} from ‘./aleatorio.js’;
+import {perguntas} from ‘./perguntas.js;
 const caixaPrincipal = document.querySelector(".caixa-principal");
 const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
-
-const perguntas = [
+const botaoJogarNovamente = document.querySelector(".novamente-btn")
 {
     enunciado: "Ana está explorando a floresta quando encontra uma pequena porta em uma árvore. Ao lado dela, existem duas chaves: uma dourada e uma prateada.",
     alternativas: [
@@ -183,5 +184,9 @@ if (escolhasBoas >= 3) {
 
 
 }
-
+function jogaNovamente(){
+    atual = 0;
+    historiaFinal = "";
+    mostraPergunta();
+}
 mostraPergunta();
