@@ -68,11 +68,10 @@ mostraPergunta();
 }
 
 function exibeResultadoFinal() {
-
 caixaPerguntas.textContent = "Fim da jornada!";
 textoResultado.textContent = historiaFinal;
 caixaAlternativas.textContent = "";
-botaoJogarNovamente.addEventListener("click", jogaNovamente());
+caixaResultado.classList.add("mostrar"); botaoJogarNovamente.addEventListener("click", jogaNovamente);
 /*
 if (escolhasBoas >= 3) {
 
@@ -97,6 +96,7 @@ if (escolhasBoas >= 3) {
 function jogaNovamente(){
     atual = 0;
     historiaFinal = "";
+    caixaResultado.classList.remove("mostrar");
     mostraPergunta();
 }
 mostraPergunta();
