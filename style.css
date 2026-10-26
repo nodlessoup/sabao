@@ -10,6 +10,7 @@
 body {
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
+  font-family: 'Inter', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,9 +23,11 @@ body {
   text-align: center;
   padding: 20px;
 }
-
-h1 {
-  color: var(--cor-destaque);
+h1{
+  color: var(--cor-principal)
+}
+h1, .caixa-perguntas, .caixa-resultado{
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 button {
@@ -45,4 +48,9 @@ button:hover{
 }
 .caixa-resultado.mostrar{
   display: block;
+}
+.caixa-alternativas{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
