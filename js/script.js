@@ -50,18 +50,15 @@ for (const alternativa of perguntaAtual.alternativas) {
 }
 
 function respostaSelecionada(opcaoSelecionada) {
-
-if (opcaoSelecionada.tipo === "boa") {
-
-    escolhasBoas++;
-
-} else {
-
-    escolhasRuins++;
-}
-
+const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
+historiaFinal += afirmacoes + " ";
 atual++;
-
+if(opcaoSelecionada.proxima != undefined){
+    atual = opcaoSelecionada.proxima;
+}else {
+    exibeResultadoFinal();
+    return;
+}
 mostraPergunta();
 
 

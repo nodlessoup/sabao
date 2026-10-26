@@ -8,7 +8,7 @@ export const perguntas = [
                 "A chave dourada possui um símbolo de sol.",
                 "Ana escolhe a chave dourada e decide seguir em frente."
             ],
-            tipo: "boa"
+            proxima: 1,
         },
         {
             texto: "Pegar a chave prateada: Ana escolhe a chave com símbolo de lua e decide seguir em frente.",
@@ -16,7 +16,7 @@ export const perguntas = [
                 "A chave prateada possui um símbolo de lua.",
                 "Ana escolhe a chave prateada e decide seguir em frente."
             ],
-            tipo: "ruim"
+            proxima: 2,
         }
     ]
 },
@@ -30,7 +30,7 @@ export const perguntas = [
                 "Ana decide ajudar o viajante perdido.",
                 "Ana e o viajante conseguem encontrar uma trilha segura."
             ],
-            tipo: "boa"
+            proxima: 3,
         },
         {
             texto: "Continuar sozinha: Ana agradece, mas prefere seguir seu próprio caminho.",
@@ -38,7 +38,7 @@ export const perguntas = [
                 "Ana prefere continuar sua jornada sozinha.",
                 "Ana decide não ajudar o viajante a encontrar o caminho de volta."
             ],
-            tipo: "ruim"
+            proxima: 4,
         }
     ]
 },
@@ -52,7 +52,7 @@ export const perguntas = [
                 "Ana testa cada tábua antes de pisar.",
                 "Ana atravessa a ponte devagar para garantir uma travessia segura."
             ],
-            tipo: "boa"
+            proxima: 5,
         },
         {
             texto: "Atravessar correndo: Ana decide correr pela ponte para chegar ao outro lado rapidamente.",
@@ -60,7 +60,7 @@ export const perguntas = [
                 "Ana decide correr pela ponte.",
                 "Ana quer chegar rapidamente ao outro lado do rio."
             ],
-            tipo: "ruim"
+            proxima: 6,
         }
     ]
 },
@@ -74,7 +74,7 @@ export const perguntas = [
                 "Ana acredita que a pedra poderá ser útil.",
                 "Ana decide guardar a pedra brilhante consigo."
             ],
-            tipo: "boa"
+            proxima: 7,
         },
         {
             texto: "Deixá-la para trás: Ana considera a mensagem estranha e decide continuar sem a pedra.",
@@ -82,7 +82,7 @@ export const perguntas = [
                 "Ana considera a mensagem da pedra estranha.",
                 "Ana decide deixar a pedra para trás e continuar sua jornada."
             ],
-            tipo: "ruim"
+            proxima: 8,
         }
     ]
 },
